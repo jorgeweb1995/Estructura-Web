@@ -1,0 +1,70 @@
+block config
+    include config
+doctype
+html(lang="es")
+    head
+        title= `${NombPagina} | ${NombSitio}`
+        //--- META
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        meta(name="robotos" content="index,follow")
+        meta(property="fb:app_id" content="")
+        meta(name="description" content="")
+        meta(name="keywords" content="")
+        meta(rel="icon" href="" sizes="16x16")
+         //--- ESTILOS INTERNOS
+        link(rel="stylesheet" href="public/css/styles.css")
+        //--- ESTILOS EXTERNOS
+        //-- WOW CSS
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css")
+        //-- FONT AWESOME CSS
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css")
+        //-- SOCICON CSS
+        link(rel="stylesheet" href="https://s3.amazonaws.com/icomoon.io/114779/Socicon/style.css?9ukd8d")
+        //--- TIPOGRFIA
+        link(href='https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900', rel='stylesheet')
+        link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900', rel='stylesheet')
+        //-- OWL CAROUSEL CSS  
+        link(rel='stylesheet', href='public/css/owl.carousel.min.css')
+        block styles
+    body
+        include ../includes/header
+        block contenido
+        include ../includes/about/about-1
+        include ../includes/galeria
+        include ../includes/clientes
+        include ../includes/contact
+        include ../includes/footer
+        block script-inicio
+        //-- SCRIPT JQUERY
+        script(src='https://code.jquery.com/jquery-1.12.4.js')
+        //-- MAIN
+        script(src="src/js/main.js")
+        //-- OWL CAROUSEL JS
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js')
+        script.
+            $('.owl-carousel').owlCarousel({
+                loop:true,
+                margin:10,
+                autoplay: true,
+                nav: false,
+                responsiveClass:true,
+                responsive:{
+                0:{
+                items:1
+                },
+                600:{
+                items:3
+                },
+                1000:{
+                items:5
+                }
+                }
+                })
+        //--WOW
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js")
+        script.
+            new WOW().init();
+        block script-final
+

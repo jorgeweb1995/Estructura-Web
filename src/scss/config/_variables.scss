@@ -1,0 +1,43 @@
+//-- PALETA DE COLOR
+
+:root{
+    --color-first: #fbc02d;
+    --color-second: #d66332;
+    --color-thrid: #58595b;
+
+    --color-dark: #1f1e1e;
+    --color-light: #fff;
+}
+
+$color-1: #fbc02d;
+$color-2: #d66332;
+$color-3: #58595b;
+
+$color-dark: #1f1e1e;
+$color-light: #fff;
+
+.color-first{
+    --color: var(--color-first)
+}
+
+.color-second{
+    --color: var(--color-second)
+}
+
+.color-third{
+    --color: var(--color-third)
+}
+
+.color-dark{
+    --color: var(--color-dark)
+}
+
+.color-light{
+    --color: var(--color-light)
+}
+
+
+//-- FUENTES
+
+$fuente-principal: 'Raleway', sans-serif;
+$fuente-secundaria:'Roboto', sans-serif;

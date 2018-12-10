@@ -1,0 +1,15 @@
+@import "config/variables";
+@import "config/mixins";
+@import "config/media";
+@import "config/funciones";
+
+@import "base/base";
+
+@import "layout/inicio";
+@import "layout/about/about-1";
+
+@import "components/header";
+@import "components/galeria";
+@import "components/clientes";
+@import "components/contact";
+@import "components/footer"

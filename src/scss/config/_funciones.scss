@@ -1,0 +1,37 @@
+$font-titulo: (
+    font-titulo--small: 1.8rem,
+    font-titulo--medium: 2.2rem,
+    font-titulo--standart: 2.5rem,
+    font-titulo--big: 3rem);
+
+.titulo{
+    font-size: map-get($font-titulo, font-titulo--small);
+    line-height: 2.2rem;
+        @include from ($m2){
+            font-size: map-get($font-titulo, font-titulo--medium);
+            line-height: 2.6rem;
+            @include from ($m3){
+                font-size: map-get($font-titulo, font-titulo--standart);
+                line-height: 2.9rem;
+                @include from ($m4){
+                    font-size: map-get($font-titulo, font-titulo--big);
+                    line-height: 3.4rem;
+                }
+            }
+        }  
+}
+
+$font-descripcion:(
+    font-descripcion--small: .9rem,
+    font-descripcion--medium: 1rem);
+
+.descripcion{
+    line-height: 1.5rem;
+    font-weight: 300;
+    margin-top: .8rem;
+    font-size: map-get($font-descripcion, font-descripcion--small);
+    @media screen and ($m3){
+        font-size: mag-get($font-descripcion, font-descripcion--medium);
+        line-height: 1.6rem
+    }
+}

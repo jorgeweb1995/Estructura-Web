@@ -1,0 +1,6 @@
+.contact .contact__container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: red; }
