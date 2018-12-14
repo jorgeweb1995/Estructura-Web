@@ -11,7 +11,7 @@
         animation: 'slide',
         inherit_width_from: window,
         inherit_height_from: window,
-        pagination: true,
+        pagination: false,
         hashchange: false,
         scrollable: true,
         elements: {
