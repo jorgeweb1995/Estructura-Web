@@ -1,19 +1,20 @@
-(function(){
 
-    let icon = document.getElementById('icon')
+    let icon = document.getElementById('icon'); // OBTENER ICONO MENU
+    let nav = document.getElementById('nav'); // OBTENER NAVEGACIÓN
 
-        icon.addEventListener('click', () =>{
-            
+    icon.addEventListener('click', e =>{       
+        icon.classList.toggle('iconClick')
+        nav.classList.toggle('navTranslate')
+    });
+
+    nav.addEventListener('click', e =>{
+       if(e.target.classList.contains('item__link')){
             icon.classList.toggle('iconClick')
+            nav.classList.toggle('navTranslate')
+       }
+    });
 
-            let nav = document.getElementById('nav')
 
-             nav.classList.toggle('navTranslate')
-
-    })
-
-})()
-    
     
     //-----------
     //---- SCROLL

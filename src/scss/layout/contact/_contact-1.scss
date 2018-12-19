@@ -74,6 +74,7 @@
         .face__right{
             @include from ($m3){
                 width: 40%;
+                @include bg-cont;
                 background-image: 
                     linear-gradient(
                         rgba($color-dark,.9),

@@ -7,11 +7,12 @@
 
 @import "layout/inicio";
 @import "layout/about/about-2";
+@import "layout/gallery/gallery-1";
+@import "layout/clients/clients-1";
+@import "layout/contact/contact-1";
+@import "layout/footer/footer-1";
 
 @import "components/header";
-@import "components/galeria";
-@import "components/clientes";
-@import "components/contact";
-@import "components/footer";
 
+//---- SOBRESCRIBIR ESTILOS 
 @import "hacks/hacks"
