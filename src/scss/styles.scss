@@ -5,13 +5,12 @@
 
 @import "base/base";
 
-@import "layout/inicio";
-@import "layout/about/about-2";
+@import "layout/header";
+@import "layout/clientes";
+@import "layout/contact";
+@import "layout/footer";
 
-@import "components/header";
-@import "components/galeria";
-@import "components/clientes";
-@import "components/contact";
-@import "components/footer";
+@import "pages/inicio";
+
 
 @import "hacks/hacks"

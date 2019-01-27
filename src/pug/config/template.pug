@@ -13,8 +13,6 @@ html(lang="es")
         meta(name="description" content="")
         meta(name="keywords" content="")
         meta(rel="icon" href="" sizes="16x16")
-         //--- ESTILOS INTERNOS
-        link(rel="stylesheet" href="public/css/styles.css")
         //--- ESTILOS EXTERNOS
         //-- WOW CSS
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css")
@@ -27,11 +25,12 @@ html(lang="es")
         link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900', rel='stylesheet')
         //-- OWL CAROUSEL CSS  
         link(rel='stylesheet', href='public/css/owl.carousel.min.css')
+        //--- ESTILOS INTERNOS
+        link(rel="stylesheet" href="public/css/styles.css")
         block styles
     body
         include ../includes/header
         block contenido
-        include ../includes/galeria
         include ../includes/clientes
         include ../includes/contact
         include ../includes/footer
