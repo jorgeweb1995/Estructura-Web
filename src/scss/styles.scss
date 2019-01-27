@@ -5,6 +5,7 @@
 
 @import "base/base";
 
+<<<<<<< HEAD
 @import "layout/header";
 @import "layout/clientes";
 @import "layout/contact";
@@ -12,5 +13,16 @@
 
 @import "pages/inicio";
 
+=======
+@import "layout/inicio";
+@import "layout/about/about-2";
+@import "layout/gallery/gallery-1";
+@import "layout/clients/clients-1";
+@import "layout/contact/contact-1";
+@import "layout/footer/footer-1";
 
+@import "components/header";
+>>>>>>> c99c110c5286126e590ecf67d57bf92daa6bda85
+
+//---- SOBRESCRIBIR ESTILOS 
 @import "hacks/hacks"

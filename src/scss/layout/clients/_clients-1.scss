@@ -1,0 +1,13 @@
+.clientes{
+    padding-top: 0;
+    padding-bottom: 3rem;
+    width: 100%;
+    @include from ($m3){
+        padding-top: 2rem;
+        padding-bottom: 5rem
+    }
+}
+
+.owl-dots{
+    display: none
+}
