@@ -1,72 +1,79 @@
 footer{
-    width: 100%;
-    padding-top: 1.5rem;
-    background-color: $color-dark;
+    width            : 100%;
+    padding-top      : 1.5rem;
+    background-color : $color-dark;
     .footer__contenedor{
         @include l-cont;
         @include l-center;
+
         &--informacion{
-            width: 100%;
+            width : 100%;
             @include from ($m2){
-                display: flex;
-                align-items: center;
-                justify-content: space-between
+                display         : flex;
+                align-items     : center;
+                justify-content : space-between
             }
+
             .logotipo{
-                width: 180px;
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: 1rem;
+                width         : 180px;
+                display       : block;
+                margin-left   : auto;
+                margin-right  : auto;
+                margin-bottom : 1rem;
                 @include from ($m2){
-                   margin: unset;
-                   @include from ($m3){
-                        width: 200px
+                    margin : unset;
+                    @include from ($m3){
+                        width : 200px
                     }
                 }
+
                 img{
-                    width: 100%
+                    width : 100%
                 }
             }
+
             .informacion__lista{
-                margin-top: 1.5rem;
-                display: none;
+                margin-top : 1.5rem;
+                display    : none;
                 @include from ($m2){
-                    display: flex;
+                    display : flex;
                     &--item{
                         a{
-                            color: $color-light ;
-                            padding-left: 1.5em;
-                            font-size: .9rem
+                            color        : $color-light;
+                            padding-left : 1.5em;
+                            font-size    : .9rem
                         }
                     }
                 }
                 @include from ($m3){
-                    margin-top: 0
+                    margin-top : 0
                 }
             }
+
             &:last-child{
-                padding: .9rem 0;
-                margin-top: .7rem;
-                border-top: 1px solid rgba(255,255,255,.2);
-                color: $color-light;
-                text-align: center;
-                font-size: .9rem;
-                font-weight: 300;
+                padding     : .9rem 0;
+                margin-top  : .7rem;
+                border-top  : 1px solid rgba(255, 255, 255, .2);
+                color       : $color-light;
+                text-align  : center;
+                font-size   : .9rem;
+                font-weight : 300;
                 @include from ($m2){
-                    margin-top: 1rem;
+                    margin-top : 1rem;
                     @include from ($m2){
-                        padding: 1.1rem 0
+                        padding : 1.1rem 0
                     }
                 }
+
                 .informacion__desarrollo{
-                    margin-top: .5rem;
+                    margin-top : .5rem;
                     @include from ($m2){
-                        margin-top: 0
+                        margin-top : 0
                     }
+
                     a{
-                        color: $color-light;
-                        font-weight: 700
+                        color       : $color-light;
+                        font-weight : 700
                     }
                 }
             }

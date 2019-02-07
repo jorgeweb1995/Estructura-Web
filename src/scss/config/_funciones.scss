@@ -26,12 +26,12 @@ $font-descripcion:(
     font-descripcion--medium: 1rem);
 
 .descripcion{
-    line-height: 1.5rem;
-    font-weight: 300;
-    margin-top: .8rem;
-    font-size: map-get($font-descripcion, font-descripcion--small);
+    line-height : 1.5rem;
+    font-weight : 300;
+    margin-top  : .8rem;
+    font-size   : map-get($font-descripcion, font-descripcion--small);
     @media screen and ($m3){
-        font-size: mag-get($font-descripcion, font-descripcion--medium);
-        line-height: 1.6rem
+        font-size   : mag-get($font-descripcion, font-descripcion--medium);
+        line-height : 1.6rem
     }
 }
