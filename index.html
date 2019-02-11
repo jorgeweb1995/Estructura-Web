@@ -17,12 +17,16 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
     <link rel="stylesheet" href="public/css/owl.carousel.min.css">
     <link rel="stylesheet" href="public/css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/superslides/0.6.2/stylesheets/superslides.min.css">
   </head>
   <body>
     <header>
       <div class="header__contenedor">
-        <h1 class="header__contenedor--logotipo"><a href="index.html">Logo</a></h1><i class="header__contenedor--icono" id="icon"></i>
+        <h1 class="header__contenedor--logotipo"><a href="index.html">Logo</a></h1>
+        <div class="header__contenedor--icono" id="icon">
+          <div class="icon-element"></div>
+          <div class="icon-element"></div>
+          <div class="icon-element"></div>
+        </div>
         <nav id="nav">
           <ul class="nav__lista">
             <li class="nav__lista--item"><a class="item__link" href="#inicio">Inicio<i class="fas fa-home"></i></a></li>
@@ -68,11 +72,11 @@
         <div class="contact__container--face face__right">
           <div class="face__container">
             <h2 class="face__container--title titulo">Contáctanos</h2>
-            <form class="face__container--form">
-              <input type="text" placeholder="Nombre y Apellido">
-              <input type="email" placeholder="Correo Electrónico">
-              <input type="text" placeholder="Celular">
-              <textarea placeholder="Mensaje"></textarea><a href="#">Enviar</a>
+            <form class="face__container--form" method="post" action="">
+              <input type="text" name="name" placeholder="Nombre y Apellido" v-model="datos.name" v-bind:class="{'input-error': errors.name}">
+              <input type="email" name="email" placeholder="Correo Electrónico" v-model="datos.email" v-bind:class="{'input-error': errors.email}">
+              <input type="text" name="phone" placeholder="Celular" v-model="datos.phone" v-bind:class="{'input-error': errors.phone}">
+              <textarea placeholder="Mensaje" v-model="datos.message"></textarea><a href="#" @click.prevent="formAlert">Enviar</a>
             </form>
           </div>
         </div>
@@ -97,7 +101,7 @@
       </div>
     </footer>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="src/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
       $('.owl-carousel').owlCarousel({
@@ -121,6 +125,6 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>new WOW().init();</script>
-    <script src="src/js/superslides.js"></script>
+    <script src="src/js/main.js"></script>
   </body>
 </html>

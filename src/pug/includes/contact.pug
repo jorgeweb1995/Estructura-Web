@@ -5,9 +5,14 @@ section.contact#contacto
         .contact__container--face.face__right
             .face__container
                 h2.face__container--title.titulo Contáctanos
-                form.face__container--form
-                    input(type="text" placeholder="Nombre y Apellido")
-                    input(type="email" placeholder="Correo Electrónico")
-                    input(type="text" placeholder="Celular")
-                    textarea(placeholder="Mensaje")
-                    a(href="#") Enviar
+                form(class="face__container--form" method="post" action="" )
+
+                    input(type="text" name="name" placeholder="Nombre y Apellido" v-model='datos.name' v-bind:class="{'input-error': errors.name}")
+
+                    input(type="email" name="email" placeholder="Correo Electrónico" v-model='datos.email' v-bind:class="{'input-error': errors.email}")
+
+                    input(type="text" name="phone" placeholder="Celular" v-model='datos.phone' v-bind:class="{'input-error': errors.phone}")
+
+                    textarea(placeholder="Mensaje" v-model= 'datos.message')
+
+                    a(href="#" @click.prevent= 'formAlert') Enviar

@@ -49,36 +49,39 @@ header{
         }
 
         &--icono{
-            width    : 30px;
-            cursor   : pointer;
-            display  : block;
-            position : relative;
-            @include from ($m3){
-                display : none
-            }
-
-            &:after, &:before{
-                content          : "";
+            width            : 30px;
+            cursor           : pointer;
+            display          : block;
+            position         : relative;
+            .icon-element{
                 width            : 100%;
                 height           : 2px;
-                display          : block;
-                transition       : transform .5s;
-                border-radius    : 10px;
-                background-color : $color-light
+                transition       : transform .5s, opacity .5s;
+                background-color : $color-light;
+                &:nth-child(2){
+                    margin-top : 5px
+                }
+
+                &:nth-child(3){
+                    margin-top : 5px
+                }
             }
 
-            &:after{
-                margin-top : 15px
-            }
+            @include from ($m3){display : none}
         }
 
         .iconClick{
-            &:before{
-                transform : rotate(45deg) translate(6px, 6px)
-            }
-
-            &:after{
-                transform : rotate(-45deg) translate(6px, -6px)
+            .icon-element{
+                &:nth-child(1){
+                    transform : rotate(45deg) translate(5px, 5px)
+                }
+                &:nth-child(2){
+                    transform : translateX(20px);
+                    opacity   : 0;
+                }
+                &:nth-child(3){
+                    transform : rotate(-45deg) translate(5px, -5px)
+                }
             }
         }
 

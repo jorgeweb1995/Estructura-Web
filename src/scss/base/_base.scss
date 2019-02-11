@@ -29,18 +29,20 @@ ul{list-style: none}
 
 img{display: block}
 
+iframe{
+    display: block;
+    border: 0
+}
+
 input,textarea,select{
     outline: none;
     border: 0;
     padding: .5rem;
 }
 
-textarea{
-    resize: none
-}
+.input-error{border: 1px solid #f00 !important}
 
-iframe{
-    display: block;
-    border: 0
-}
+
+textarea{resize: none}
+
 

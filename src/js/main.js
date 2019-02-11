@@ -1,4 +1,5 @@
-
+    //-----------
+    //---- NAVIGATION
     let icon = document.getElementById('icon'); // OBTENER ICONO MENU
     let nav = document.getElementById('nav'); // OBTENER NAVEGACIÓN
 
@@ -54,6 +55,51 @@
                 }
             }
         });
+
+    //-----------
+    //---- FORM
+
+    const contact = new Vue ({
+        el: '#contacto',
+        data: {
+            datos: {
+                name: '',
+                email: '',
+                phone: '',
+                message: ''
+            },
+            errors: {
+                name: '',
+                email: '',
+                phone: ''
+            }
+        },
+        methods: {
+            formAlert() {
+                this.errors = {
+                    name: '',
+                    email: '',
+                    phone: ''
+                }
+
+                if(this.datos.name === ''){
+                    this.errors.name = 'falta nombre';
+                }
+
+                if(this.datos.email === ''){
+                    this.errors.email = 'falta email';
+                }
+
+                if(this.datos.phone === ''){
+                    this.errors.phone = 'falta telefono';
+                }
+
+            }
+        }
+
+    })
+
+
 
  
 
