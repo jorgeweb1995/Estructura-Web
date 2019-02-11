@@ -1,37 +1,70 @@
-$font-titulo: (
-    font-titulo--small: 1.8rem,
-    font-titulo--medium: 2.2rem,
-    font-titulo--standart: 2.5rem,
-    font-titulo--big: 3rem);
+//---------------------
+//---------------------
+//--- SECONDARY TITLE
 
-.titulo{
-    font-size: map-get($font-titulo, font-titulo--small);
+$secondary-font-title: (
+    font-title--small: 1.8rem,
+    font-title--medium: 2.2rem,
+    font-title--standart: 2.5rem,
+    font-title--big: 3rem);
+
+.secondary-title{
+    font-size: map-get($secondary-font-title, font-title--small);
     line-height: 2.2rem;
         @include from ($m2){
-            font-size: map-get($font-titulo, font-titulo--medium);
+            font-size: map-get($secondary-font-title, font-title--medium);
             line-height: 2.6rem;
             @include from ($m3){
-                font-size: map-get($font-titulo, font-titulo--standart);
+                font-size: map-get($secondary-font-title, font-title--standart);
                 line-height: 2.9rem;
                 @include from ($m4){
-                    font-size: map-get($font-titulo, font-titulo--big);
+                    font-size: map-get($secondary-font-title, font-title--big);
                     line-height: 3.4rem;
                 }
             }
         }  
 }
 
-$font-descripcion:(
-    font-descripcion--small: .9rem,
-    font-descripcion--medium: 1rem);
+//---------------------
+//---------------------
+//--- DESCRIPTIVE TEXT
 
-.descripcion{
+$font-description:(
+    font-description--small: .9rem,
+    font-description--medium: 1rem);
+
+.description{
     line-height : 1.5rem;
     font-weight : 300;
     margin-top  : .8rem;
-    font-size   : map-get($font-descripcion, font-descripcion--small);
+    font-size   : map-get($font-description, font-description--small);
     @media screen and ($m3){
-        font-size   : mag-get($font-descripcion, font-descripcion--medium);
+        font-size   : map-get($font-description, font-description--medium);
         line-height : 1.6rem
+    }
+}
+
+//---------------------
+//---------------------
+//--- BUTTON HOVER
+
+.hover-btn{
+    display     : flex !important;
+    align-items : center;
+    &:before{
+        content          : "";
+        width            : 0;
+        height           : 1px;
+        display          : block;
+        transition       : width .5s, margin-right .5s;
+        background-color : $color-light;
+    }
+    @include from ($m3){
+        &:hover{
+            &:before{
+                margin-right : 1rem;
+                width        : 40px
+            }
+        }
     }
 }

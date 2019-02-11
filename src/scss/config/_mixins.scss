@@ -1,28 +1,44 @@
-// PROPIEDADES BOTON
+//----------------
+//----------------
+//--- BUTTON PROPERTY
+
 @mixin p-btn{
     color: #fff;
     padding: .8rem 2rem;
     display: inline-block;
     box-shadow: 0 0 10px 1px rgba(63,63,63,.1);
-    transition: all .5s}
+    transition: all .5s;
+}
 
-// PROPIEDADES CONTENEDOR
+//----------------
+//----------------
+//--- CONTAINER PROPERTY
+
 @mixin l-cont{
     width: 90%;
     max-width: 1250px}
 
-// PROPIEDADES CENTRADO
+//----------------
+//----------------
+//--- CENTER PROPERTY
+
 @mixin l-center{
     margin-left: auto;
     margin-right: auto}
 
-// PROPIEDADES BACKGROUND
+//----------------
+//----------------
+//--- BACKGROUND PROPERTY
+
 @mixin bg-cont{
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center}
 
-// PROPIEDADES DESCRIPCION
+//----------------
+//----------------
+//--- DESCRIPTION PROPERTY
+
 @mixin p-desc{
     font-size: .9rem;
     line-height: 1.5rem;

@@ -71,12 +71,20 @@
         </div>
         <div class="contact__container--face face__right">
           <div class="face__container">
-            <h2 class="face__container--title titulo">Contáctanos</h2>
+            <h2 class="face__container--title secondary-title">Contáctanos</h2>
             <form class="face__container--form" method="post" action="">
-              <input type="text" name="name" placeholder="Nombre y Apellido" v-model="datos.name" v-bind:class="{'input-error': errors.name}">
-              <input type="email" name="email" placeholder="Correo Electrónico" v-model="datos.email" v-bind:class="{'input-error': errors.email}">
-              <input type="text" name="phone" placeholder="Celular" v-model="datos.phone" v-bind:class="{'input-error': errors.phone}">
-              <textarea placeholder="Mensaje" v-model="datos.message"></textarea><a href="#" @click.prevent="formAlert">Enviar</a>
+              <div class="form-item">
+                <input type="text" name="name" placeholder="Nombre y Apellido" v-model="datos.name" v-bind:class="{'input-error': errors.name}"><span></span>
+              </div>
+              <div class="form-item">
+                <input type="email" name="email" placeholder="Correo Electrónico" v-model="datos.email" v-bind:class="{'input-error': errors.email}"><span></span>
+              </div>
+              <div class="form-item">
+                <input type="text" name="phone" placeholder="Celular" v-model="datos.phone" v-bind:class="{'input-error': errors.phone}"><span></span>
+              </div>
+              <div class="form-item">
+                <textarea placeholder="Mensaje" v-model="datos.message"></textarea>
+              </div><a class="hover-btn" href="#" @click.prevent="formAlert">Enviar</a>
             </form>
           </div>
         </div>
@@ -95,8 +103,8 @@
           </ul>
         </div>
         <div class="footer__contenedor--informacion">
-          <p class="informacion__copy">Copyright © Todos los Derechos Reservados</p>
-          <p class="informacion__desarrollo">Desarrollado por: <a href="https://chilcanoweb.com/">Chilcanoweb</a></p>
+          <p class="informacion__copy description">Copyright © Todos los Derechos Reservados</p>
+          <p class="informacion__desarrollo description">Desarrollado por:<a href="https://chilcanoweb.com/">Chilcanoweb</a></p>
         </div>
       </div>
     </footer>
@@ -125,6 +133,6 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>new WOW().init();</script>
-    <script src="src/js/main.js"></script>
+    <script src="public/js/main.js"></script>
   </body>
 </html>

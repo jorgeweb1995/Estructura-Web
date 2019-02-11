@@ -1,5 +1,6 @@
     //-----------
     //---- NAVIGATION
+
     let icon = document.getElementById('icon'); // OBTENER ICONO MENU
     let nav = document.getElementById('nav'); // OBTENER NAVEGACIÓN
 
@@ -98,8 +99,6 @@
         }
 
     })
-
-
 
  
 
