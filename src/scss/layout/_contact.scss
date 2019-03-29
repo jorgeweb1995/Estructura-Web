@@ -102,9 +102,8 @@
                         }
                     }
                     a{
-                        @include p-btn;
-                        background-color : $color-dark;
-                        color            : $color-light;
+                        @include p-btn($color-light, $color-dark);
+                        margin-top : 10rem;
                         @include from ($m3){
                             background-color : darken($color-dark, 1);
                         }

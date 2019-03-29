@@ -26,7 +26,10 @@ a{text-decoration: none}
 
 ul{list-style: none}
 
-img{display: block}
+img{
+    display   : block;
+    max-width : 100%;
+}
 
 iframe{
     display: block;
