@@ -29,10 +29,10 @@
         </div>
         <nav id="nav">
           <ul class="nav__lista">
-            <li class="nav__lista--item"><a class="item__link" href="#inicio">Inicio<i class="fas fa-home"></i></a></li>
-            <li class="nav__lista--item"><a class="item__link" href="#about">Nosotros<i class="fas fa-home"></i></a></li>
-            <li class="nav__lista--item"><a class="item__link" href="#galeria">Galería<i class="fas fa-utensils"></i></a></li>
-            <li class="nav__lista--item"><a class="item__link" href="#contacto">Contacto<i class="fas fa-book-open"></i></a></li>
+            <li class="nav__lista--item"><a class="item__link" href="#inicio">Inicio</a></li>
+            <li class="nav__lista--item"><a class="item__link" href="#about">Nosotros</a></li>
+            <li class="nav__lista--item"><a class="item__link" href="#galeria">Galería</a></li>
+            <li class="nav__lista--item"><a class="item__link" href="#contacto">Contacto</a></li>
           </ul>
         </nav>
       </div>
@@ -65,32 +65,6 @@
         </div>
       </div>
     </section>
-    <section class="contact" id="contacto">
-      <div class="contact__container">
-        <div class="contact__container--face face__left">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d499488.88285513397!2d-77.26798166899341!3d-12.02582697306998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c5f619ee3ec7%3A0x14206cb9cc452e4a!2sLima!5e0!3m2!1ses-419!2spe!4v1544333871772"></iframe>
-        </div>
-        <div class="contact__container--face face__right">
-          <div class="face__container">
-            <h2 class="face__container--title secondary-title">Contáctanos</h2>
-            <form class="face__container--form" method="post" action="">
-              <div class="form-item">
-                <input type="text" name="name" placeholder="Nombre y Apellido" v-model="datos.name" v-bind:class="{'input-error': errors.name}"><span></span>
-              </div>
-              <div class="form-item">
-                <input type="email" name="email" placeholder="Correo Electrónico" v-model="datos.email" v-bind:class="{'input-error': errors.email}"><span></span>
-              </div>
-              <div class="form-item">
-                <input type="text" name="phone" placeholder="Celular" v-model="datos.phone" v-bind:class="{'input-error': errors.phone}"><span></span>
-              </div>
-              <div class="form-item">
-                <textarea placeholder="Mensaje" v-model="datos.message"></textarea>
-              </div><a class="hover-btn" href="#" @click.prevent="formAlert">Enviar</a>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
     <footer>
       <div class="footer__contenedor">
         <div class="footer__contenedor--informacion"><a class="logotipo" href="#inicio"><img src="public/img/logotipo.svg" alt="Logotipo"></a>
@@ -110,7 +84,6 @@
       </div>
     </footer>
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script>
       $('.owl-carousel').owlCarousel({

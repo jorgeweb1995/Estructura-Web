@@ -1,8 +1,6 @@
 header{
     width            : 100%;
     position         : fixed;
-    background-color : $color-1;
-    box-shadow       : 0 0 10px 1px rgba($color-2, .3);
     z-index          : 9;
 
     @include from ($m3){
@@ -87,24 +85,24 @@ header{
 
         nav{
             position         : fixed;
-            width            : 70%;
-            max-width        : 300px;
+            width            : 100%;
             background-color : $color-light;
-            box-shadow       : 0 0 10px 1px rgba($color-dark, .1);
-            top              : 71px;
-            left             : -100%;
-            transition       : left .5s;
-            height           : calc(100% - 71px);
+            top              : 0;
+            left             : 0;
+            pointer-events:  none;
+            opacity: 0;
+            transition       : opacity .5s;
+            height           : 100vh;
             @include from ($m2){
                 top    : 86px;
                 height : calc(100% - 86px)
             }
             @include from ($m3){
-                box-shadow       : unset;
+                pointer-events:  auto;
+                opacity: 1;
                 position         : static;
                 height           : unset;
                 width            : unset;
-                max-width        : unset;
                 background-color : transparent
             }
 
@@ -116,11 +114,6 @@ header{
                 }
 
                 &--item{
-                    border-bottom : 1px solid rgba($color-dark, .1);
-                    @include from ($m3){
-                        border-bottom : 0
-                    }
-
                     a{
                         color           : $color-dark;
                         font-size       : .9rem;
@@ -132,13 +125,6 @@ header{
                             color       : $color-light;
                             padding     : 0 2rem;
                             font-weight : 400;
-                        }
-
-                        i{
-                            font-size : .9rem;
-                            @include from ($m3){
-                                display : none
-                            }
                         }
                     }
 
@@ -154,7 +140,8 @@ header{
         }
 
         .navTranslate{
-            left : 0;
+            pointer-events:  auto;
+            opacity: 1;
         }
     }
 }

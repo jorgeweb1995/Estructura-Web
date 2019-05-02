@@ -6,7 +6,8 @@ $secondary-font-title: (
     font-title--small: 1.8rem,
     font-title--medium: 2.2rem,
     font-title--standart: 2.5rem,
-    font-title--big: 3rem);
+    font-title--big: 3rem,
+    font-title--bigx: 3.5rem);
 
 .secondary-title{
     font-size: map-get($secondary-font-title, font-title--small);
@@ -20,6 +21,10 @@ $secondary-font-title: (
                 @include from ($m4){
                     font-size: map-get($secondary-font-title, font-title--big);
                     line-height: 3.4rem;
+                    @include from ($m5){
+                        font-size: map-get($secondary-font-title, font-title--bigx);
+                        line-height: 3.9rem
+                    }
                 }
             }
         }  
