@@ -3,9 +3,6 @@ footer{
     padding-top      : 1.5rem;
     background-color : $color-dark;
     .footer__contenedor{
-        @include l-cont;
-        @include l-center;
-
         &--informacion{
             width : 100%;
             @include from ($m2){

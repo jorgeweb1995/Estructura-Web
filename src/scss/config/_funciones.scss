@@ -68,3 +68,13 @@ $font-description:(
         }
     }
 }
+
+
+//---------------------
+//---------------------
+//--- C O N T A I N E R
+
+.container{
+    @include l-cont;
+    @include l-center;
+}

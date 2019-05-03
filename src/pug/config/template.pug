@@ -12,7 +12,7 @@ html(lang="es")
         meta(property="fb:app_id" content="")
         meta(name="description" content="")
         meta(name="keywords" content="")
-        meta(rel="icon" href="" sizes="16x16")
+        link(rel="icon" href="" sizes="16x16")
         //--- ESTILOS EXTERNOS
         //-- WOW CSS
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css")
@@ -23,7 +23,9 @@ html(lang="es")
         //--- TIPOGRFIA
         link(href='https://fonts.googleapis.com/css?family=Raleway:300,400,500,700,900', rel='stylesheet')
         link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900', rel='stylesheet')
-        //-- OWL CAROUSEL CSS  
+        //-- FANCYBOX CSS
+        link(href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css", rel="stylesheet")
+        //-- OWL CAROUSEL CSS
         link(rel='stylesheet', href='public/css/owl.carousel.min.css')
         //--- ESTILOS INTERNOS
         link(rel="stylesheet" href="public/css/styles.css")
@@ -32,13 +34,10 @@ html(lang="es")
         include ../includes/header
         block contenido
         include ../includes/clientes
-        include ../includes/contact
         include ../includes/footer
         block script-inicio
         //-- SCRIPT JQUERY
-        script(src='https://code.jquery.com/jquery-1.12.4.js')
-        //-- SCRIPT VUE JS
-        script(src='https://cdn.jsdelivr.net/npm/vue')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
         //-- OWL CAROUSEL JS
         script(src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js')
         script.
@@ -60,6 +59,8 @@ html(lang="es")
                 }
                 }
                 })
+        //--FANCYBOX
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js")
         //--WOW
         script(src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js")
         script.

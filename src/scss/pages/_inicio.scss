@@ -1,16 +1,34 @@
+//----- B A N N E R
+
 .banner{
-  --gradient: .2;
-  --url: url('https://cdn.pixabay.com/photo/2015/09/02/12/37/fern-918570_960_720.jpg');
-  background-color: var(--rgba);
+  --gradient       : .2;
+  --url            : url('../../public/img/background.jpg');
+  background-color : var(--rgba);
   @include bg-cont;
-  padding : 10rem;
-  background-image: linear-gradient(
-    rgba($color-dark, var(--gradient)),
-    rgba($color-dark, var(--gradient))
+  height           : 100vh;
+  background-image : linear-gradient(
+                  rgba($color-dark, var(--gradient)),
+                  rgba($color-dark, var(--gradient))
   ),
   var(--url);
   @include from ($m3){
-    --gradient: .9;
-    --url: url('https://cdn.pixabay.com/photo/2019/01/22/10/52/spring-3947898_960_720.jpg')
+    --gradient : .3;
+  }
+}
+
+//----- G A L L E R Y
+
+.work{
+  --padding        : 3rem;
+  padding-top      : var(--padding);
+  padding-bottom   : var(--padding);
+  &__container{
+    &--header{
+      text-align : center;
+      color      : $color-dark;
+    }
+    &--gallery{
+      margin-top       : 1.5rem;
+    }
   }
 }
