@@ -6,7 +6,8 @@ $secondary-font-title: (
     font-title--small: 1.8rem,
     font-title--medium: 2.2rem,
     font-title--standart: 2.5rem,
-    font-title--big: 3rem);
+    font-title--big: 3rem,
+    font-title--xbig: 3.5rem);
 
 .secondary-title{
     font-size: map-get($secondary-font-title, font-title--small);
@@ -20,6 +21,10 @@ $secondary-font-title: (
                 @include from ($m4){
                     font-size: map-get($secondary-font-title, font-title--big);
                     line-height: 3.4rem;
+                    @include from ($m5){
+                        font-size   : map-get($secondary-font-title, font-title--xbig);
+                        line-height : 3.8rem;
+                    }
                 }
             }
         }  
@@ -57,7 +62,7 @@ $font-description:(
         height           : 1px;
         display          : block;
         transition       : width .5s, margin-right .5s;
-        background-color : $color-light;
+        background-color : $bg-white;
     }
     @include from ($m3){
         &:hover{
@@ -78,3 +83,5 @@ $font-description:(
     @include l-cont;
     @include l-center;
 }
+
+

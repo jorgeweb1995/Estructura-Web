@@ -1,25 +1,38 @@
-//-- PALETA DE COLOR
-
 :root{
-    --first-color     : #fbc02d;
-    --secondary-color : #d66332;
-    --thirty-color    : #58595b;
 
-    --dark-color      : #1f1e1e;
-    --light-color     : #fff;
+// C O L O R S
+
+--first-color     : #fbc02d;
+--secondary-color : #d66332;
+--thirty-color    : #58595b;
+--dark-color      : #1f1e1e;
+--light-color     : #fff;
+
+// P A D D I N G
+
+--paddingY: 3rem;
+--paddingX: 3rem;
+
 }
 
-$color-1: #fbc02d;
-$color-2: #d66332;
-$color-3: #58595b;
 
-$color-dark: #1f1e1e;
-$color-light: #fff;
+// T E X T - C O L O R S
 
+$color-first     : #fbc02d;
+$color-secondary : #d66332;
+$thirty-color    : #58595b;
+$text-dark       : #1f1e1e;
+$text-white      : #fff;
 
+// B A C K G R O U N D - C O L O R S
 
+$bg-first: #fbc02d;
+$bg-secondary: #d66332;
+$bg-thirty: #58595b;
+$bg-dark: #1f1e1e;
+$bg-white: #fff;
 
-//-- FUENTES
+// F O N T - F A M I L Y
 
-$fuente-principal: 'Raleway', sans-serif;
+$fuente-principal : 'Raleway', sans-serif;
 $fuente-secundaria:'Roboto', sans-serif;
