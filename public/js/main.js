@@ -58,49 +58,32 @@
         });
 
     //-----------
-    //---- FORM
+    //---- G A L L E R Y
 
-    const contact = new Vue ({
-        el: '#contacto',
-        data: {
-            datos: {
-                name: '',
-                email: '',
-                phone: '',
-                message: ''
-            },
-            errors: {
-                name: '',
-                email: '',
-                phone: ''
-            }
-        },
-        methods: {
-            formAlert() {
-                this.errors = {
-                    name: '',
-                    email: '',
-                    phone: ''
-                }
+    const masonryLayout = (containerElem, itemsElems, columns) => {
 
-                if(this.datos.name === ''){
-                    this.errors.name = 'falta nombre';
-                }
+        containerElem.classList.add('masonry-layout')
 
-                if(this.datos.email === ''){
-                    this.errors.email = 'falta email';
-                }
+        let columnsElements = []
 
-                if(this.datos.phone === ''){
-                    this.errors.phone = 'falta telefono';
-                }
-
-            }
+        for( let i = 1; i <= columns; i++){
+            let column = document.createElement('div')
+            column.classList.add('masonry-column', `column-${i}`)
+            containerElem.appendChild(column)
+            columnsElements.push(column)
         }
 
-    })
+        for(let m = 0; m < Math.ceil(itemsElems.length / columns); m++){
+            for(let n = 0; n < columns; n++){
+                let item = itemsElems[ m * columns + n]
+                columnsElements[n].appendChild(item)
+                item.classList.add('masonry-item')
+            }
+        }
+    }
 
- 
+    masonryLayout(document.getElementById('gallery'),
+        document.querySelectorAll('.gallery__item'), 3)
 
  
 

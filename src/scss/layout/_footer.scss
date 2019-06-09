@@ -1,11 +1,11 @@
 footer{
+    --paddingY       : 2rem;
     width            : 100%;
-    padding-top      : 1.5rem;
-    background-color : $color-dark;
-    .footer__contenedor{
-        @include l-cont;
-        @include l-center;
+    padding-top      : var(--paddingY);
+    padding-bottom   : var(--paddingY);
+    background-color : $bg-dark;
 
+    .footer__contenedor{
         &--informacion{
             width : 100%;
             @include from ($m2){
@@ -39,7 +39,7 @@ footer{
                     display : flex;
                     &--item{
                         a{
-                            color        : $color-light;
+                            color        : $text-white;
                             padding-left : 1.5em;
                             font-size    : .9rem
                         }
@@ -51,17 +51,17 @@ footer{
             }
 
             &:last-child{
-                padding     : .9rem 0;
+                padding-top : .9rem;
                 margin-top  : .7rem;
                 border-top  : 1px solid rgba(255, 255, 255, .2);
-                color       : $color-light;
+                color       : $text-white;
                 text-align  : center;
                 font-size   : .9rem;
                 font-weight : 300;
                 @include from ($m2){
                     margin-top : 1rem;
                     @include from ($m2){
-                        padding : 1.1rem 0
+                        padding-top : 1.1rem;
                     }
                 }
 
@@ -72,7 +72,7 @@ footer{
                     }
 
                     a{
-                        color       : $color-light;
+                        color       : $text-white;
                         font-weight : 700
                     }
                 }
