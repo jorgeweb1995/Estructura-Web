@@ -39,7 +39,7 @@ footer{
                     display : flex;
                     &--item{
                         a{
-                            color        : $text-white;
+                            color        : $text-light;
                             padding-left : 1.5em;
                             font-size    : .9rem
                         }
@@ -54,7 +54,7 @@ footer{
                 padding-top : .9rem;
                 margin-top  : .7rem;
                 border-top  : 1px solid rgba(255, 255, 255, .2);
-                color       : $text-white;
+                color       : $text-light;
                 text-align  : center;
                 font-size   : .9rem;
                 font-weight : 300;
@@ -72,7 +72,7 @@ footer{
                     }
 
                     a{
-                        color       : $text-white;
+                        color       : $text-light;
                         font-weight : 700
                     }
                 }

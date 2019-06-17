@@ -1,15 +1,17 @@
-.banner{
-  --gradient: .2;
-  --url: url('../../public/img/background.jpg');
-  background-color: var(--rgba);
+.banner
+{
+  --gradient       : .2;
+  --url            : url('../../public/img/background.jpg');
+  background-color : var(--rgba);
   @include bg-cont;
-  min-height: 100vh;
-  background-image: linear-gradient(
-    rgba($color-dark, var(--gradient)),
-    rgba($color-dark, var(--gradient))
+  min-height       : 100vh;
+  background-image : linear-gradient(
+                  rgba($bg-dark, var(--gradient)),
+                  rgba($bg-dark, var(--gradient))
   ),
   var(--url);
-  @include from ($m3){
-    --gradient: .4;
+  @include from ($m3)
+  {
+    --gradient : .4;
   }
 }

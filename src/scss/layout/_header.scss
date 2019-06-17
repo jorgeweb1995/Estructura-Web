@@ -2,7 +2,6 @@ header{
     width            : 100%;
     position         : fixed;
     z-index          : 9;
-
     @include from ($m3){
         box-shadow       : unset;
         background-color : transparent;
@@ -12,8 +11,6 @@ header{
     }
 
     .header__contenedor{
-        @include l-cont;
-        @include l-center;
         padding-top     : .5rem;
         padding-bottom  : .5rem;
         display         : flex;
@@ -24,8 +21,12 @@ header{
             padding-bottom : 0
         }
 
-        &--logotipo{
-            a{
+        &--logotipo
+        {
+            position : relative;
+            z-index  : 2;
+            a
+            {
                 background-image    : url(../../public/img/logotipo.svg);
                 background-repeat   : no-repeat;
                 background-position : center;
@@ -34,10 +35,12 @@ header{
                 height              : 55px;
                 text-indent         : -1000em;
                 display             : block;
-                @include from ($m2){
+                @include from ($m2)
+                {
                     width  : 130px;
                     height : 70px;
-                    @include from ($m3){
+                    @include from ($m3)
+                    {
                         width  : 170px;
                         height : 50px;
 
@@ -46,26 +49,35 @@ header{
             }
         }
 
-        &--icono{
-            width            : 30px;
-            cursor           : pointer;
-            display          : block;
-            position         : relative;
-            .icon-element{
+        &--icono
+        {
+            width    : 30px;
+            cursor   : pointer;
+            display  : block;
+            position : relative;
+            z-index  : 2;
+            .icon-element
+            {
                 width            : 100%;
                 height           : 2px;
                 transition       : transform .5s, opacity .5s;
-                background-color : $color-light;
-                &:nth-child(2){
+                background-color : $bg-light;
+
+                &:nth-child(2)
+                {
                     margin-top : 5px
                 }
 
-                &:nth-child(3){
+                &:nth-child(3)
+                {
                     margin-top : 5px
                 }
             }
 
-            @include from ($m3){display : none}
+            @include from ($m3)
+            {
+                display : none
+            }
         }
 
         .iconClick{
@@ -83,54 +95,66 @@ header{
             }
         }
 
-        nav{
+        nav
+        {
             position         : fixed;
             width            : 100%;
-            background-color : $color-light;
+            background-color : $bg-dark;
             top              : 0;
             left             : 0;
-            pointer-events:  none;
-            opacity: 0;
+            pointer-events   : none;
+            opacity          : 0;
             transition       : opacity .5s;
             height           : 100vh;
-            @include from ($m2){
+            display          : flex;
+            align-items      : center;
+            @include from ($m2)
+            {
                 top    : 86px;
                 height : calc(100% - 86px)
             }
-            @include from ($m3){
-                pointer-events:  auto;
-                opacity: 1;
+            @include from ($m3)
+            {
+                pointer-events   : auto;
+                opacity          : 1;
                 position         : static;
                 height           : unset;
                 width            : unset;
                 background-color : transparent
             }
 
-            .nav__lista{
-                width : 100%;
-                @include from ($m3){
+            .nav__lista
+            {
+                width            : 100%;
+                @include from ($m3)
+                {
                     display     : flex;
                     align-items : center
                 }
 
-                &--item{
-                    a{
-                        color           : $color-dark;
-                        font-size       : .9rem;
-                        padding         : 1rem .8rem;
-                        display         : flex;
-                        justify-content : space-between;
-                        align-items     : center;
-                        @include from ($m3){
-                            color       : $color-light;
+                &--item
+                {
+                    text-align: center;
+                    a
+                    {
+                        color     : $text-light;
+                        font-size : 1.1rem;
+                        padding   : 1rem .8rem;
+                        display   : inline-block;
+                        @include from ($m3)
+                        {
                             padding     : 0 2rem;
                             font-weight : 400;
+                            font-size   : .9rem;
                         }
                     }
 
-                    &:last-child{
-                        @include from ($m3){
-                            a{
+                    &:last-child
+                    {
+                        @include from ($m3)
+                        {
+                            a
+                            {
                                 padding-right : 0;
                             }
                         }

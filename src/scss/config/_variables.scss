@@ -1,36 +1,49 @@
-:root{
+:root
+{
+
+  // C O L O R S
+
+  --first-color     : #fbc02d;
+  --secondary-color : #d66332;
+  --thirty-color    : #58595b;
+
+  // T E X T
+
+  --text-dark       : #1f1e1e;
+  --text-light      : #fff;
+
+  // B A C K G R O U N D
+
+  --bg-firt         : #fbc02d;
+  --bg-secondary    : #d66332;
+  --bg-thirty       : #58595b;
+  --bg-dark         : #1f1e1e;
+  --bg-light        : #fff;
+
+  // P A D D I N G
+
+  --paddingY        : 3rem;
+  --paddingX        : 3rem;
+}
 
 // C O L O R S
 
---first-color     : #fbc02d;
---secondary-color : #d66332;
---thirty-color    : #58595b;
---dark-color      : #1f1e1e;
---light-color     : #fff;
+$first-color     : #fbc02d;
+$secondary-color : #d66332;
+$thirty-color : #58595b;
 
-// P A D D I N G
+// T E X T
 
---paddingY: 3rem;
---paddingX: 3rem;
-
-}
-
-
-// T E X T - C O L O R S
-
-$color-first     : #fbc02d;
-$color-secondary : #d66332;
-$thirty-color    : #58595b;
 $text-dark       : #1f1e1e;
-$text-white      : #fff;
+$text-light    : #fff;
 
-// B A C K G R O U N D - C O L O R S
+// B A C K G R O U N D
 
 $bg-first: #fbc02d;
 $bg-secondary: #d66332;
 $bg-thirty: #58595b;
 $bg-dark: #1f1e1e;
-$bg-white: #fff;
+$bg-light: #fff;
 
 // F O N T - F A M I L Y
 
