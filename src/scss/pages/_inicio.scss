@@ -10,8 +10,4 @@
                   rgba($bg-dark, var(--gradient))
   ),
   var(--url);
-  @include from ($m3)
-  {
-    --gradient : .4;
-  }
 }

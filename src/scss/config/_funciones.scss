@@ -51,6 +51,21 @@ $font-description:(
 
 //---------------------
 //---------------------
+//--- CONTAINER
+
+.container
+{
+    width        : 90%;
+    max-width    : 1250px;
+    margin-left  : auto;
+    margin-right : auto;
+    @include from ($m3){
+        width: 80%
+    }
+}
+
+//---------------------
+//---------------------
 //--- BUTTON HOVER
 
 .hover-btn{
@@ -76,12 +91,36 @@ $font-description:(
 
 //---------------------
 //---------------------
-//--- CONTAINER
+//--- BUTTON 
 
-.container
-{
-    width        : 90%;
-    max-width    : 1250px;
-    margin-left  : auto;
-    margin-right : auto;
+.button_container{
+    display: flex;
+    .button{
+        padding: .8rem 2rem;
+        display: inline-block;
+        margin-top: .8rem;
+        box-shadow: 0 0 10px 1px rgba($bg-dark, .2);
+        transition: all .5s;
+    }
+}
+
+.first-color{
+    color: var(--text-light);
+    background-color: var(--first-color);
+}
+
+.second-color{
+    color: var(--text-light);
+    background-color: var(--second-color)
+}
+
+//---------------------
+//---------------------
+//--- PADDING
+.paddingY{
+    padding-top: var(--paddingY);
+    padding-bottom: var(--paddingY);
+    @include from ($m3){
+        --paddingY: 6rem
+    }
 }

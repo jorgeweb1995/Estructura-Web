@@ -1,18 +1,20 @@
 block config
     include config
+    include ../components/button
+    include ../components/service
 doctype
 html(lang="es")
     head
-        title= `${NombPagina} | ${NombSitio}`
+        title= ` ${NombSitio} | ${NombPagina}`
         //--- META
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         meta(name="robotos" content="index,follow")
         meta(property="fb:app_id" content="")
-        meta(name="description" content="")
-        meta(name="keywords" content="")
-        meta(rel="icon" href="" sizes="16x16")
+        meta(name="description" content="según el sitio")
+        meta(name="keywords" content=" palabras claves")
+        link(rel="icon" href="" sizes="16x16")
         //--- ESTILOS EXTERNOS
         //-- WOW CSS
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css")
@@ -35,7 +37,7 @@ html(lang="es")
         include ../includes/footer
         block script-inicio
         //-- SCRIPT JQUERY
-        script(src='https://code.jquery.com/jquery-1.12.4.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js')
         //-- OWL CAROUSEL JS
         script(src='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js')
         script.

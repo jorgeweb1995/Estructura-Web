@@ -1,16 +1,16 @@
 :root {
   --first-color: #fbc02d;
-  --secondary-color: #d66332;
-  --thirty-color: #58595b;
+  --second-color: #d66332;
   --text-dark: #1f1e1e;
   --text-light: #fff;
   --bg-firt: #fbc02d;
-  --bg-secondary: #d66332;
-  --bg-thirty: #58595b;
+  --bg-second: #d66332;
   --bg-dark: #1f1e1e;
   --bg-light: #fff;
   --paddingY: 3rem;
-  --paddingX: 3rem; }
+  --paddingX: 3rem;
+  --margin: auto
+; }
 
 .secondary-title {
   font-size: 1.8rem;
@@ -42,6 +42,15 @@
       font-size: 1rem;
       line-height: 1.6rem; } }
 
+.container {
+  width: 90%;
+  max-width: 1250px;
+  margin-left: auto;
+  margin-right: auto; }
+  @media screen and (min-width: 1024px) {
+    .container {
+      width: 80%; } }
+
 .hover-btn {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
@@ -63,11 +72,35 @@
       margin-right: 1rem;
       width: 40px; } }
 
-.container {
-  width: 90%;
-  max-width: 1250px;
-  margin-left: auto;
-  margin-right: auto; }
+.button_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .button_container .button {
+    padding: .8rem 2rem;
+    display: inline-block;
+    margin-top: .8rem;
+    -webkit-box-shadow: 0 0 10px 1px rgba(31, 30, 30, 0.2);
+    box-shadow: 0 0 10px 1px rgba(31, 30, 30, 0.2);
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s; }
+
+.first-color {
+  color: var(--text-light);
+  background-color: var(--first-color); }
+
+.second-color {
+  color: var(--text-light);
+  background-color: var(--second-color); }
+
+.paddingY {
+  padding-top: var(--paddingY);
+  padding-bottom: var(--paddingY); }
+  @media screen and (min-width: 1024px) {
+    .paddingY {
+      --paddingY: 6rem
+    ; } }
 
 *:after,
 *:before,
@@ -268,8 +301,11 @@ header {
   .clientes .row {
     width: 90%;
     max-width: 1250px;
-    margin-left: auto;
-    margin-right: auto; }
+    margin-left: var(--margin);
+    margin-right: var(--margin); }
+    @media screen and (min-width: 1024px) {
+      .clientes .row {
+        width: 80%; } }
 
 .owl-dots {
   display: none; }
@@ -357,6 +393,3 @@ footer {
   background-image: -webkit-linear-gradient(rgba(31, 30, 30, var(--gradient)), rgba(31, 30, 30, var(--gradient))), var(--url);
   background-image: -o-linear-gradient(rgba(31, 30, 30, var(--gradient)), rgba(31, 30, 30, var(--gradient))), var(--url);
   background-image: linear-gradient(rgba(31, 30, 30, var(--gradient)), rgba(31, 30, 30, var(--gradient))), var(--url); }
-  @media screen and (min-width: 1024px) {
-    .banner {
-      --gradient: .4; } }
